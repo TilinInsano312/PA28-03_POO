@@ -1,38 +1,17 @@
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.List;
 public class Consulta {
     private String fecha;
     private String hora;
-    private Profesional profesional;
-    private ArrayList<Paciente> pacientes;
-    private ArrayList<Establecimiento> establecimientos;
-    private ArrayList<Profesional> profesionals;
-    Scanner scanner = new Scanner(System.in);
-
-    public Consulta(String fecha, String hora, Profesional profesional, ArrayList<Paciente> pacientes, ArrayList<Establecimiento> establecimientos, ArrayList<Profesional> profesionals) {
+    private String motivo;
+    private List<Paciente> pacientes = new ArrayList<>();
+    private List<Establecimiento> establecimientos = new ArrayList<>();
+    private List<Profesional> profesionals = new ArrayList<>();
+    private List<Consulta> consultas = new ArrayList<>();
+    public Consulta(String fecha, String hora, String nombrePaciente,String apellidoPaciente, String dniPaciente,String motivo, String nombreProfesional,String apellidoProfesional, String dniProfesional, String nombreEstablecimiento, String ubicacionEstablecimiento, String tipoEstablecimiento) {
         this.fecha = fecha;
         this.hora = hora;
-        this.profesional = profesional;
-        this.pacientes = pacientes;
-        this.establecimientos = establecimientos;
-        this.profesionals = profesionals;
+        this.motivo = motivo;
     }
 
-    public void crearConsulta(String fecha, String hora, Profesional profesional, ArrayList<Paciente> pacientes, ArrayList<Establecimiento> establecimientos, ArrayList<Profesional> profesionals) {
-
-        Consulta consulta = new Consulta(fecha, hora, profesional, pacientes, establecimientos, profesionals);
-    }
-
-    @Override
-    public String toString() {
-        return "Consulta{" +
-                "fecha='" + fecha + '\'' +
-                ", hora='" + hora + '\'' +
-                ", profesional=" + profesional +
-                ", pacientes=" + pacientes +
-                ", establecimientos=" + establecimientos +
-                ", profesionals=" + profesionals +
-                ", scanner=" + scanner +
-                '}';
-    }
 }
