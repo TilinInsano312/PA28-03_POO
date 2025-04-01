@@ -12,7 +12,7 @@ public class Profesional {
         this.dni = dni;
         this.especialidad = especialidad;
         this.experiencia = experiencia;
-        this.estado = estado;
+        this.estado = false;
     }
 
     public String getNombre() {

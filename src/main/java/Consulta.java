@@ -1,9 +1,10 @@
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.List;
 public class Consulta {
     private String fecha;
     private String hora;
     private String motivo;
+
     private Profesional profesional;
     private ArrayList<Paciente> pacientes;
     private ArrayList<Establecimiento> establecimientos;
